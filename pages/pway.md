@@ -49,6 +49,7 @@ Lets test the KVM; `screen /dev/ttyUSB0 19200` The console should go blank
 Now power cycle the KVM.
 You should see:
 
+```
 AX6800x bootloader[0] v1.0.3
 
 Runtime checksum check.
@@ -71,10 +72,11 @@ VGA_SWITCH_CONTROL=0
 
 ch452 version: 0x20.
 ->state:1, set led0  0x8. 
+```
 
 If you see this then you have wired up the receive side of the RS232 port correctly
 Now type in `PS 2` and press enter. You should see the characters as you type; then the KVM should beep and you have switched to port 2
-exit the screen command with [control]+[a] then press [\] then confirm with [y]
+exit the screen command with [control]+[a] then press [\\] then confirm with [y]
 
 
 If that does not work test the serial port by disconnecting the TGR port from the KVM and short out pin T with R (use a metal paperclip or some wire)
@@ -82,11 +84,11 @@ Then use the screen session and type you should see your letter print on the scr
 
 Assuming success...
 
-Now add the `[pway.py](https://github.com/SpookHCK/pikvm/files/7196043/pway.py.zip)` file to `/usr/lib/python3.9/site-packages/kvmd/plugins/ugpio/` This is the driver file that has been modified to make the 16-port KVM work; Thanks Max; you made this super easy!
+Now add the [pway.py](https://github.com/SpookHCK/pikvm/files/7196043/pway.py.zip) file to `/usr/lib/python3.9/site-packages/kvmd/plugins/ugpio/` This is the driver file that has been modified to make the 16-port KVM work; Thanks Max; you made this super easy!
 I found SCP worked well, but there are lots of options.
 
 Next modify the `/etc/kvmd/override.yaml` file and include the following. Note the assumption that the RS232 adapter is present on /dev/ttyUSB0:
-
+```
 kvmd:
     gpio:
         drivers:
@@ -256,6 +258,7 @@ kvmd:
                 - ["#Input 14", ch14_led, ch14_button]
                 - ["#Input 15", ch15_led, ch15_button]
                 - ["#Input 16", ch16_led, ch16_button]
+```
                 
 Return to read-only mode for the sd card via `ro`
 
