@@ -82,7 +82,7 @@ Then use the screen session and type you should see your letter print on the scr
 
 Assuming success...
 
-Now add the `pway.py` file to `/usr/lib/python3.9/site-packages/kvmd/plugins/ugpio/` This is the driver file that has been modified to make the 16-port KVM work; Thanks Max; you made this super easy!
+Now add the `[pway.py](https://github.com/SpookHCK/pikvm/files/7196043/pway.py.zip)` file to `/usr/lib/python3.9/site-packages/kvmd/plugins/ugpio/` This is the driver file that has been modified to make the 16-port KVM work; Thanks Max; you made this super easy!
 I found SCP worked well, but there are lots of options.
 
 Next modify the `/etc/kvmd/override.yaml` file and include the following. Note the assumption that the RS232 adapter is present on /dev/ttyUSB0:
