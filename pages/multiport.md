@@ -20,6 +20,7 @@ Here the status is:
 | [Ali's noname](https://a.aliexpress.com/_BSpS8t) | ✔ | Limitations are are listed below  |
 | [Aimos 8-port HDMI USB-C KVM Switch](https://www.amazon.de/AIMOS-Umschalter-Tastatur-unterst%C3%BCtzen-verbunden/dp/B08FR5K111/) | ✔ | Similar to Ali's noname model, available in 4/8port editions, has same HDMI bridge boot problem/solution using a Marmitek 312 UHD HDMI splitter. Limitations are are listed below |
 | [TESmart 8 PORT - HDMI KVM SWITCH](https://buytesmart.com/collections/8-ports) |  ✔ | Use OTG with USB 2.0 Hub only, no hotkey support. Switching available with serial or IP-to-serial interface using fixed IP (/31 peer-to-peer addressing supported). Can be managed [via WebUI](tesmart.md) or [CLI tool](https://github.com/bbeaudoin/bash/tree/master/tesmart) |
+| [PWAY 16-Port KVM SH1601A](https://www.alibaba.com/product-detail/PWAY-SH1601A-16-Port-Support-4Kx2K_62474691127.html) | ✔ |[Using with Pi-KVM](pway.md) - 16 Port is the ONLY tested and supported KVM. |
 
 Limitations:
 
